@@ -24,5 +24,10 @@ describe Ibanez::Iban do
       iban = Ibanez::Iban.new('GR73 0380 1A50 0000 0000 1208 017')
       expect(iban).not_to be_valid
     end
+
+    it 'validates UK IBAN' do
+      iban = Ibanez::Iban.new('GB29 NWBK 6016 1331 9268 19', 'UK')
+      expect(iban).to be_valid
+    end
   end
 end
