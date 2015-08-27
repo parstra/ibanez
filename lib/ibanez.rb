@@ -1,6 +1,4 @@
-require "ibanez/version"
-require "ibanez/iban"
-
-module Ibanez
-  # Your code goes here...
-end
+require 'ibanez/version'
+require 'ibanez/iban/validator'
+require 'ibanez/iban'
+require 'yaml'
