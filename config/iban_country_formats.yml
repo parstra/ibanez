@@ -1,10 +1,12 @@
 GR:
+  name: Greece
   length: 27
   format:
     - n: 7
     - c: 16
 
 UK:
+  name: United Kingdom
   length: 22
   format:
     - a: 4
