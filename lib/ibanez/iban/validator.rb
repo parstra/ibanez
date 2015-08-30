@@ -25,9 +25,8 @@ module Ibanez
       end
 
       def valid_format?
-        regs = { n: "\\d", a: "[a-zA-Z]", c: "\\w" }
-        country_reg = "^#{format.map { |t, c| "#{regs[t.to_sym]}{#{c}}"}.join}$"
-        !iban.to_s.slice(4, length - 4).match(/#{country_reg}/).nil?
+        country_reg = ['^.{4}', format.map { |e| e.map{ |t, c| [REGS[t], "{#{c}}"]}}, '$'].join
+        !iban.number.match(/^#{country_reg}$/).nil?
       end
 
       def initialize_format

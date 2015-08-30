@@ -1,11 +1,11 @@
 GR:
   length: 27
   format:
-    n: 7
-    c: 16
+    - n: 7
+    - c: 16
 
 UK:
   length: 22
   format:
-    a: 4
-    n: 14
+    - a: 4
+    - n: 14
