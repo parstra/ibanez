@@ -34,5 +34,13 @@ module Ibanez
     countries_settings.map { |_, country_attributes| country_attributes['name'] }.sort
   end
 
+  # Determines if a country is supported
+  # @param country[String] the given country's code or name
+  #
+  # @return [Boolean]
+  def self.supports?(country)
+    countries_settings.keys.include?(country.to_s) || supported_countries.include?(country.to_s)
+  end
+
   class UnknownCountryException < StandardError; end
 end
