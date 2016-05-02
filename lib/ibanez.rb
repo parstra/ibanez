@@ -1,6 +1,7 @@
 require 'ibanez/version'
 require 'ibanez/iban/validator'
 require 'ibanez/iban'
+require 'ibanez/tools'
 require 'yaml'
 
 module Ibanez
