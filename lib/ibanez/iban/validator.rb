@@ -30,13 +30,10 @@ module Ibanez
       end
 
       def initialize_format
-        config_file = File.expand_path('../../../../config/iban_country_formats.yml', __FILE__)
-        if settings = YAML.load_file(config_file)[iban.country]
-          @length = settings['length']
-          @format = settings['format']
-        else
-          raise SettingsError.new("Unknown coutry: #{iban.country}")
-        end
+        country_settings = Ibanez.country_settings(iban.country)
+
+        @length = country_settings['length']
+        @format = country_settings['format']
       end
 
       def valid_number?
@@ -46,7 +43,5 @@ module Ibanez
           to_i % 97 == 1
       end
     end
-
-    class SettingsError < StandardError; end
   end
 end

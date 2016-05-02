@@ -2,6 +2,11 @@ require 'spec_helper'
 
 describe Ibanez::Iban do
   describe '#valid?' do
+    it 'raises an UnknowCountryException on unknown country' do
+      expect { Ibanez::Iban.new('1234', 'ZERGOVIA').valid? }.
+        to raise_error(Ibanez::UnknownCountryException, /Unknown country/)
+    end
+
     it 'validates valid IBAN' do
       ['GR73 0380 1150 0000 0000 1208 017', 'GR41 0140 2940 2940 0232 0000 587'].each do |iban|
         expect(Ibanez::Iban.new(iban)).to be_valid
