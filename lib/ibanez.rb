@@ -27,6 +27,12 @@ module Ibanez
     raise UnknownCountryException.new("Unknown country: #{country}")
   end
 
+  # Fetches the supported countries
+  #
+  # @return [Array<String>] with countries
+  def self.supported_countries
+    countries_settings.map { |_, country_attributes| country_attributes['name'] }.sort
+  end
 
   class UnknownCountryException < StandardError; end
 end

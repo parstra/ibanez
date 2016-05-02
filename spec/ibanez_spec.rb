@@ -66,4 +66,14 @@ describe Ibanez do
   end
 
   describe '.supported_countries' do
+    before do
+      allow(Ibanez).to receive(:countries_settings) do
+        {"GR"=>{"name"=>"Greece", "length"=>27, "format"=>[{"n"=>7}, {"c"=>16}]}, "UK"=>{"name"=>"United Kingdom", "length"=>22, "format"=>[{"a"=>4}, {"n"=>14}]}}
+      end
+    end
+
+    it 'shows the supported countries' do
+      expect(Ibanez.supported_countries).to match_array(['Greece', 'United Kingdom'])
+    end
+  end
 end
