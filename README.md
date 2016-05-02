@@ -55,6 +55,79 @@ iban.valid?
 #=> false
 ```
 
+## Info
+
+Ibanez currently supports the following countries:
+
+* Albania
+* Andorra
+* Austria
+* Azerbaijan
+* Bahrain
+* Belgium
+* Bosnia and Herzegovina
+* Brazil
+* Bulgaria
+* Costa Rica
+* Croatia
+* Cyprus
+* Czech Republic
+* Denmark
+* Dominican Republic
+* East Timor
+* Estonia
+* Faroe Islands
+* Finland
+* France
+* Georgia
+* Germany
+* Gibraltar
+* Greece
+* Greenland
+* Guatemala
+* Hungary
+* Iceland
+* Ireland
+* Israel
+* Italy
+* Jordan
+* Kazakhstan
+* Kosovo
+* Kuwait
+* Latvia
+* Lebanon
+* Liechtenstein
+* Lithuania
+* Luxembourg
+* Macedonia
+* Malta
+* Mauritania
+* Mauritius
+* Moldova
+* Monaco
+* Montenegro
+* Netherlands
+* Norway
+* Pakistan
+* Palestinian territories
+* Poland
+* Portugal
+* Qatar
+* Romania
+* San Marino
+* Saudi Arabia
+* Serbia
+* Slovakia
+* Slovenia
+* Spain
+* Sweden
+* Switzerland
+* Tunisia
+* Turkey
+* United Arab Emirates
+* United Kingdom
+* Virgin Islands, British
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
