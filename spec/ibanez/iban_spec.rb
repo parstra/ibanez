@@ -30,9 +30,26 @@ describe Ibanez::Iban do
       expect(iban).not_to be_valid
     end
 
-    it 'validates UK IBAN' do
-      iban = Ibanez::Iban.new('GB29 NWBK 6016 1331 9268 19', 'UK')
-      expect(iban).to be_valid
+    context 'supported countries' do
+      it 'validates UK IBAN' do
+        iban = Ibanez::Iban.new('GB29 NWBK 6016 1331 9268 19', 'UK')
+        expect(iban).to be_valid
+      end
+
+      it 'validates AL IBAN' do
+        iban = Ibanez::Iban.new('AL47 2121 1009 0000 0002 3569 8741', 'AL')
+        expect(iban).to be_valid
+      end
+
+      it 'validates AD IBAN' do
+        iban = Ibanez::Iban.new('AD12 0001 2030 2003 5910 0100', 'AD')
+        expect(iban).to be_valid
+      end
+
+      it 'validates AT IBAN' do
+        iban = Ibanez::Iban.new('AT61 1904 3002 3457 3201', 'AT')
+        expect(iban).to be_valid
+      end
     end
   end
 end

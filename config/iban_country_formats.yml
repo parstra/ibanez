@@ -1,3 +1,23 @@
+AL:
+  name: Albania
+  length: 28
+  format:
+    - n: 8
+    - c: 16
+
+AD:
+  name: Andora
+  length: 24
+  format:
+    - n: 8
+    - c: 12
+
+AT:
+  name: Austria
+  length: 20
+  format:
+    - n: 16
+
 GR:
   name: Greece
   length: 27
