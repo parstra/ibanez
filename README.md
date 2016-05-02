@@ -46,7 +46,7 @@ iban = Ibanez::Iban.new('GR73 0380 1150 0000 0000 1208 017')
 iban.valid?
 #=> true
 
-english_iban = Ibanez::Iban.new('GB29 NWBK 6016 1331 9268 19', 'UK')
+english_iban = Ibanez::Iban.new('GB29 NWBK 6016 1331 9268 19', 'GB')
 english_iban.valid?
 #=> true
 

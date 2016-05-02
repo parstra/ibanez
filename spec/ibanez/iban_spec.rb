@@ -31,8 +31,8 @@ describe Ibanez::Iban do
     end
 
     context 'supported countries' do
-      it 'validates UK IBAN' do
-        iban = Ibanez::Iban.new('GB29 NWBK 6016 1331 9268 19', 'UK')
+      it 'validates GB IBAN' do
+        iban = Ibanez::Iban.new('GB29 NWBK 6016 1331 9268 19', 'GB')
         expect(iban).to be_valid
       end
 
